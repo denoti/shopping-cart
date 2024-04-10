@@ -1,0 +1,10 @@
+.display {
+  display: grid;
+  gap: 8px;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+p {
+  margin-left: 8px;
+}
