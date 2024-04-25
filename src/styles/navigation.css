@@ -9,29 +9,25 @@ body {
   justify-content: space-between;
   padding: 5px;
 }
-ul {
+nav {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: space-between;
 }
 
-ul li {
-  list-style-type: none;
-}
-
-ul li a {
+ a {
   text-decoration: none;
 }
 
-ul li a:visited {
+ a:visited {
   color: #000;
 }
 
-ul li a:hover {
+ a:hover {
   color: blue;
 }
 
-ul li a:active {
+ a:active {
   color: rgb(224, 202, 173);
 }

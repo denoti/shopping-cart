@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import './App.css';
 import Navigation from './components/Navigation';
+import {useState} from 'react';
+import Home from './components/Home';
 
 function App() {
+  const [value, setValue] = useState(false);
   return (
     <div className='app'>
-      <Navigation></Navigation>
-      <Outlet />
+      <Navigation setValue={setValue}></Navigation>
+      {value === false ? <Home /> : <Outlet />}
     </div>
   );
 }
