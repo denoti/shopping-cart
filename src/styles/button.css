@@ -1,0 +1,13 @@
+button {
+  padding: 5px;
+  border: none;
+  background-color: rgb(122, 105, 105);
+  border-radius: 5px;
+  color: wheat;
+  height: 30px;
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.95);
+}

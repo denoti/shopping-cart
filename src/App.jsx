@@ -1,22 +1,12 @@
+import { Outlet } from 'react-router-dom';
 import './App.css';
 import Navigation from './components/Navigation';
-import Display from './components/Display';
-import Wrapper from './components/Wrapper';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <Navigation></Navigation>
-      <Display>
-        <Wrapper></Wrapper>
-        <Wrapper></Wrapper>
-        <Wrapper></Wrapper>
-        <Wrapper></Wrapper>
-        <Wrapper></Wrapper>
-        <Wrapper></Wrapper>
-        <Wrapper></Wrapper>
-        
-      </Display>
+      <Outlet />
     </div>
   );
 }

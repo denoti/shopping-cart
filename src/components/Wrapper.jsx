@@ -1,9 +1,20 @@
+
 import '../styles/wrapper.css';
+import photo from '../assets/images/7.jpg';
+import Button from './Button';
+const Wrapper = (img, p, code) => {
+  return (
+    <div className='wrapper'>
+      <div className='photo-details'>
+        <img src={photo} alt='id' />
+        <p>Name of item</p>
+      </div>
+      <div className='purchase-details'>
+        <p>code</p>
+        <Button></Button>
+      </div>
+    </div>
+  );
+};
 
-const Wrapper = ( props ) => {
-    return (
-        <div className='wrapper'>{props.children}</div>
-    )
-}
-
-export default Wrapper
+export default Wrapper;

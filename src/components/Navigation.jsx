@@ -1,20 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import '../styles/navigation.css';
+import { Link } from 'react-router-dom';
 const Navigation = () => {
   return (
     <div className='navigation'>
       <h1>Denoti's Shop</h1>
-      <ul>
-        <li>
-          <a href='#'>Home</a>
-        </li>
-        <li>
-          <a href='#'>Shop</a>
-        </li>
-        <li>
-          <a href='#'>Cart</a>
-        </li>
-      </ul>
+      <nav>
+        <Link to='/home'>Home</Link>
+
+        <Link to='/shop'>Shop</Link>
+
+        <Link to='/cart'>Cart</Link>
+      </nav>
     </div>
   );
 };
