@@ -31,3 +31,12 @@ nav {
  a:active {
   color: rgb(224, 202, 173);
 }
+
+.span {
+  border: 4px solid rgb(239, 245, 229);
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 3px;
+  color: rgb(218, 28, 123);
+}

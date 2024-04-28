@@ -1,0 +1,27 @@
+.cart {
+    border: 2px solid rgb(240, 213, 213);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttonControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkout {
+    border: 3px solid silver;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}

@@ -1,8 +1,9 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 30%;
-  height: max-content;
+  height: auto;
   border: 1px solid rgb(150, 140, 123);
   padding: 10px;
   border-radius: 5px;
@@ -19,3 +20,23 @@
   justify-content: space-between;
   align-items: center;
 }
+input {
+  width: 40px;
+  border: 2px solid grey;
+  border-radius: 3px;
+  outline: none;
+  text-align: right;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-details {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+

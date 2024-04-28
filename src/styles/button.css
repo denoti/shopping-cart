@@ -11,3 +11,7 @@ button {
 button:active {
   transform: scale(0.95);
 }
+
+button:hover {
+  cursor: pointer;
+}
