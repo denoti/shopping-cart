@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
   const [cartDetails, setCartDetails] = useState([]);
+
   const addToCart = useCallback((item) => {
     setCartDetails((prevCartDetails) => {
       const index = prevCartDetails.findIndex(
@@ -17,6 +18,9 @@ const CartContextProvider = ({ children }) => {
         updatedCart[index] = {
           ...updatedCart[index],
           quantity: updatedCart[index].quantity + item.quantity,
+          amountTotal:
+            updatedCart[index].amountTotal +
+            updatedCart[index].amount * item.quantity,
         };
       }
       return updatedCart;
