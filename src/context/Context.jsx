@@ -5,12 +5,7 @@ const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
   const [cartDetails, setCartDetails] = useState([]);
   const addToCart = useCallback((item) => {
-    setCartDetails((prevCartDetails) => {
-      const filteredItems = prevCartDetails.filter(
-        (existingItem) => existingItem.name !== item.name
-      );
-      return [...filteredItems, item];
-    });
+    setCartDetails(())
   }, []);
 
   const contextValue = {
