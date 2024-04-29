@@ -5,13 +5,13 @@ import Button from './Button';
 
 const Wrapper = ({ img, price, title }) => {
   const [inputValue, setInputValue] = useState(0);
-  const { addToCart, cartDetails } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const createItemObject = () => ({
     image: img,
     name: title,
     amount: price,
-    count: inputValue,
+    quantity: inputValue,
     amountTotal: price * inputValue,
   });
 
