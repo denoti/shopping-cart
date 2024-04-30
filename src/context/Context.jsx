@@ -14,6 +14,8 @@ const CartContextProvider = ({ children }) => {
           updatedCart[index] = {
             ...updatedCart[index],
             quantity: updatedCart[index].quantity + 1,
+            amountTotal:
+              updatedCart[index].amountTotal + updatedCart[index].amount,
           };
         } else {
           if (updatedCart[index].quantity < 2) {
@@ -22,6 +24,8 @@ const CartContextProvider = ({ children }) => {
             updatedCart[index] = {
               ...updatedCart[index],
               quantity: updatedCart[index].quantity - 1,
+              amountTotal:
+                updatedCart[index].amountTotal - updatedCart[index].amount,
             };
           }
         }

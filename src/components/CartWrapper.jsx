@@ -1,4 +1,4 @@
-import { useCallback, useContext } from 'react';
+import {  useContext } from 'react';
 import { CartContext } from '../context/Context';
 import '../styles/CartWrapper.css';
 
