@@ -15,7 +15,7 @@ const CartContextProvider = ({ children }) => {
             ...updatedCart[index],
             quantity: updatedCart[index].quantity + 1,
             amountTotal:
-              updatedCart[index].amountTotal.toFixed(2) + updatedCart[index].amount.toFixed(2),
+              updatedCart[index].amountTotal + updatedCart[index].amount
           };
         } else {
           if (updatedCart[index].quantity < 2) {
@@ -25,7 +25,7 @@ const CartContextProvider = ({ children }) => {
               ...updatedCart[index],
               quantity: updatedCart[index].quantity - 1,
               amountTotal: 
-                updatedCart[index].amountTotal.toFixed(2) - updatedCart[index].amount.toFixed(2),
+                updatedCart[index].amountTotal - updatedCart[index].amount
             };
           }
         }
@@ -49,8 +49,8 @@ const CartContextProvider = ({ children }) => {
           ...updatedCart[index],
           quantity: updatedCart[index].quantity + item.quantity,
           amountTotal: 
-            updatedCart[index].amountTotal.toFixed(2) +
-            updatedCart[index].amount.toFixed(2) * item.quantity.toFixed(2)
+            updatedCart[index].amountTotal +
+            updatedCart[index].amount * item.quantity
           
         };
       }
