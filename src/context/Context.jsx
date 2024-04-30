@@ -29,7 +29,7 @@ const CartContextProvider = ({ children }) => {
             };
           }
         }
-        console.log(updatedCart);
+     
         return updatedCart;
       });
     },
