@@ -30,7 +30,7 @@ const CartWrapper = ({ image, name, amount, quantity, amountTotal }) => {
       </div>
       <div className='priceDetails'>
         <p>price: ${amount}</p>
-        <h4>Subtotal: ${amountTotal}</h4>
+        <h4>Subtotal: ${amountTotal.toFixed(2)}</h4>
       </div>
     </div>
   );
