@@ -38,7 +38,7 @@ export default function Cart() {
           <div className='checkout'>
             <p>Total =</p>
             <span style={{ color: 'red' }} className='totalAmount'>
-              ${totalCost}
+              ${totalCost.toFixed(2)}
             </span>
           </div>
         </div>
