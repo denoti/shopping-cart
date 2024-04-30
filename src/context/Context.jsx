@@ -9,20 +9,23 @@ const CartContextProvider = ({ children }) => {
     (e, name, cart) => {
       setCartDetails(() => {
         const index = cartDetails.findIndex((item) => item.name === name);
-        const updatedCart = [...cart];
+        let updatedCart = [...cart];
         if (e === '+') {
           updatedCart[index] = {
             ...updatedCart[index],
             quantity: updatedCart[index].quantity + 1,
           };
         } else {
-          if (updatedCart[index].quantity) {
+          if (updatedCart[index].quantity < 2) {
+            updatedCart.splice(index, 1);
+          } else {
             updatedCart[index] = {
               ...updatedCart[index],
               quantity: updatedCart[index].quantity - 1,
             };
           }
         }
+        console.log(updatedCart);
         return updatedCart;
       });
     },
