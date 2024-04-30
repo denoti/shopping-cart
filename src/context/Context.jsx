@@ -5,12 +5,35 @@ const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
   const [cartDetails, setCartDetails] = useState([]);
 
+  const handleQuantity = useCallback(
+    (e, name, cart) => {
+      setCartDetails(() => {
+        const index = cartDetails.findIndex((item) => item.name === name);
+        const updatedCart = [...cart];
+        if (e === '+') {
+          updatedCart[index] = {
+            ...updatedCart[index],
+            quantity: updatedCart[index].quantity + 1,
+          };
+        } else {
+          if (updatedCart[index].quantity) {
+            updatedCart[index] = {
+              ...updatedCart[index],
+              quantity: updatedCart[index].quantity - 1,
+            };
+          }
+        }
+        return updatedCart;
+      });
+    },
+    [cartDetails]
+  );
+
   const addToCart = useCallback((item) => {
     setCartDetails((prevCartDetails) => {
       const index = prevCartDetails.findIndex(
         (existingItem) => existingItem.name === item.name
       );
-      console.log(index);
       const updatedCart = [...prevCartDetails];
       if (index === -1) {
         updatedCart.push(item);
@@ -30,6 +53,7 @@ const CartContextProvider = ({ children }) => {
   const contextValue = {
     cartDetails,
     addToCart,
+    handleQuantity,
   };
   return (
     <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
