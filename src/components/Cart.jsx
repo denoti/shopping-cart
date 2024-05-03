@@ -23,16 +23,16 @@ export default function Cart() {
         <Navigation></Navigation>
         <div>
           {cartDetails.map((item, index) => {
-              return (
-                <CartWrapper
-                  key={index}
-                  image={cartDetails[index].image}
-                  name={cartDetails[index].name}
-                  amount={cartDetails[index].amount}
-                  quantity={cartDetails[index].quantity}
-                  amountTotal={cartDetails[index].amountTotal}
-                />
-              );
+            return (
+              <CartWrapper
+                key={index}
+                image={cartDetails[index].image}
+                name={cartDetails[index].name}
+                amount={cartDetails[index].amount}
+                quantity={cartDetails[index].quantity}
+                amountTotal={cartDetails[index].amountTotal}
+              />
+            );
           })}
 
           <div className='checkout'>
